@@ -63,6 +63,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    // res.send('About page.');
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.status(500).send({
         errorMessage: 'Error!'
